@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "56b1a7be-bd52-447a-8737-d3d8095630bd",
+		"name": "Visconto Postman Modwork API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Alle Belege",
+			"id": "2e25a864-b7ce-409f-86d0-fb7a5fa4fc63",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "M2U4MzZkNj",
+						"username": "visrobot"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; version=2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://vis-work.visconto.intern/modwork_fm_q/api/beleg/?limit=100&belegart=1041&state=neu",
+					"protocol": "https",
+					"host": [
+						"vis-work",
+						"visconto",
+						"intern"
+					],
+					"path": [
+						"modwork_fm_q",
+						"api",
+						"beleg",
+						""
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "belegart",
+							"value": "1041"
+						},
+						{
+							"key": "state",
+							"value": "neu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Belegbasisdaten",
+			"id": "a602a57c-6677-43b6-ae97-1c140860e636",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "M2U4MzZkNj",
+						"username": "visrobot"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*; version=2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://vis-work.visconto.intern/modwork_fm_q/api/beleg/1729774"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Umzugsformulardaten",
+			"id": "0d124567-4b29-439f-83c2-e94f61c61fee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "M2U4MzZkNj",
+						"username": "visrobot"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*; version=1",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "https://vis-work.visconto.intern/modwork_fm_q/api/beleg/1729774/onlineformular_umzug/"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH in persönlichen Arbeitskorb",
+			"id": "4e3689be-5c6a-49f5-a457-6cccf50514fc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "M2U4MzZkNj",
+						"username": "visrobot"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*;version=2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+						"type": "text"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "form-data; name=\"meta\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "meta",
+							"value": "{\"workflow\": {\"state\": \"inarbeit\",\"owner\": \"https://vis-work.visconto.intern/modwork_fm_q/api/user/547\"}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://vis-work.visconto.intern/modwork_fm_q/api/beleg/1729774"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Beleg zurücklegen",
+			"id": "2184da1f-51d1-4836-b1a1-cb60f29fb25c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "M2U4MzZkNj",
+						"username": "visrobot"
+					}
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*;version=2",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW",
+						"type": "text"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "form-data; name=\"meta\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "meta",
+							"value": "{\"workflow\": {\"state\": \"neu\",\"owner\": \"\"}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://vis-work.visconto.intern/modwork_fm_q/api/beleg/1729774"
+			},
+			"response": []
+		}
+	]
+}
