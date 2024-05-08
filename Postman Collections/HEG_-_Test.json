@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "eab398cc-c410-41d4-a2b6-a6a0ced890b6",
+		"name": "HEG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HEG EEG - Test",
+			"id": "c00a2ebe-487b-4386-800f-5b6676cb6d1a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "ntlm",
+					"ntlm": {
+						"password": "Wa$$erstoff9!(",
+						"username": "hegrobot"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json; odata = verbose",
+						"type": "text"
+					},
+					{
+						"key": "odata",
+						"value": "verbose",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "XRequestDigest",
+						"value": "3c696056-fcef-451d-b43d-a35559056a9b;638496361860400000;3868955",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://rpa-sharepoint-heg.nat.dom/projekte/eeg-kwkg/_api/web/lists(guid'453a9aa3-11a2-44ae-bd4e-8e70a236872d')/items?",
+					"protocol": "https",
+					"host": [
+						"rpa-sharepoint-heg",
+						"nat",
+						"dom"
+					],
+					"path": [
+						"projekte",
+						"eeg-kwkg",
+						"_api",
+						"web",
+						"lists(guid'453a9aa3-11a2-44ae-bd4e-8e70a236872d')",
+						"items"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
