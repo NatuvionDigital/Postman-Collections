@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "4921da84-4567-4edd-bedb-f157dfe76d1e",
+		"name": "ZEP REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetMitarbeiter",
+			"id": "1639ee91-6807-43c9-95f8-c977180b164c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "a73bc47ca68271a33ba133bf7a396f5a544c2aab51f7e3a2b303462c8ba6dd7e"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://www.zep-online.de/zepnatuviondigital/next/api/v1/employees/dhanshree.lonkar"
+			},
+			"response": []
+		},
+		{
+			"name": "GetProjects",
+			"id": "63503773-7749-4813-be23-5e75c278de8a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "a73bc47ca68271a33ba133bf7a396f5a544c2aab51f7e3a2b303462c8ba6dd7e"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://www.zep-online.de/zepnatuviondigital/next/api/v1/projects/"
+			},
+			"response": []
+		},
+		{
+			"name": "GetActivities",
+			"id": "09025994-b095-4b0c-becd-da20168b41eb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "a73bc47ca68271a33ba133bf7a396f5a544c2aab51f7e3a2b303462c8ba6dd7e"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://www.zep-online.de/zepnatuviondigital/next/api/v1/projects/64/activities"
+			},
+			"response": []
+		},
+		{
+			"name": "GetVorgänge",
+			"id": "e7d46df7-9c08-4f3c-8a49-e717837c703e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "a73bc47ca68271a33ba133bf7a396f5a544c2aab51f7e3a2b303462c8ba6dd7e"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": "https://www.zep-online.de/zepnatuviondigital/next/api/v1/projects/64/tasks"
+			},
+			"response": []
+		}
+	]
+}
