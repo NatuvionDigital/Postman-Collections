@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "821dd09d-66a2-41d0-bfe6-f2792e8d9c8d",
+		"name": "ZEP_SOAP API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ReadProjects",
+			"id": "c5b9a0e1-24cb-4317-9a9f-195770108958",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='utf-8'?>\r\n<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:zep='http://zep.provantis.de'>\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <zep:ReadProjekteRequest>\r\n            <requestHeader>\r\n                <authorizationToken>43e13c81205d18807ee10c532532f81a9b76cba6b8e87dfaf2d753960a50c8d2</authorizationToken>\r\n            </requestHeader>\r\n            <readProjekteSearchCriteria>\r\n                <userId>dhanshree.lonkar</userId>\r\n            </readProjekteSearchCriteria>\r\n        </zep:ReadProjekteRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.zep-online.de/zepnatuviondigital/sync/soap.php?v=10",
+					"protocol": "https",
+					"host": [
+						"www",
+						"zep-online",
+						"de"
+					],
+					"path": [
+						"zepnatuviondigital",
+						"sync",
+						"soap.php"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadOrtsListe",
+			"id": "819b827e-8241-4ee9-914e-0fbbfab55d0f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='utf-8'?>\r\n<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:zep='http://zep.provantis.de'>\r\n    <soapenv:Header/>\r\n    <soapenv:Body>\r\n        <zep:ReadOrtslisteRequest>\r\n            <requestHeader>\r\n                <authorizationToken>43e13c81205d18807ee10c532532f81a9b76cba6b8e87dfaf2d753960a50c8d2</authorizationToken>\r\n            </requestHeader>\r\n            <readOrtslisteSearchCriteria>\r\n                <datum>2024-04-11</datum>\r\n            </readOrtslisteSearchCriteria>\r\n        </zep:ReadOrtslisteRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.zep-online.de/zepnatuviondigital/sync/soap.php?v=10",
+					"protocol": "https",
+					"host": [
+						"www",
+						"zep-online",
+						"de"
+					],
+					"path": [
+						"zepnatuviondigital",
+						"sync",
+						"soap.php"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadTätigkeit",
+			"id": "88755945-15b8-47cc-9b1c-c7531b30a54d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ReadMitarbeiter",
+			"id": "47a54de6-3f91-4033-bc6e-b953a8451556",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='utf-8'?>\r\n<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:zep='http://zep.provantis.de'>\r\n    \r\n    <soapenv:Body>\r\n        <zep:ReadMitarbeiterRequest>\r\n            <requestHeader>\r\n                <authorizationToken>43e13c81205d18807ee10c532532f81a9b76cba6b8e87dfaf2d753960a50c8d2</authorizationToken>\r\n            </requestHeader>\r\n            <readMitarbeiterSearchCriteria>\r\n                <userId>dhanshree.lonkar</userId>\r\n                \r\n            </readMitarbeiterSearchCriteria>\r\n        </zep:ReadMitarbeiterRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.zep-online.de/zepnatuviondigital/sync/soap.php?v=10",
+					"protocol": "https",
+					"host": [
+						"www",
+						"zep-online",
+						"de"
+					],
+					"path": [
+						"zepnatuviondigital",
+						"sync",
+						"soap.php"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProjektZeit",
+			"id": "feb20fee-e7d9-45b4-86a4-1fb246d04e49",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='utf-8'?>\r\n<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' xmlns:zep='http://zep.provantis.de'>\r\n    <soapenv:Body>\r\n        <zep:CreateProjektzeitRequest>\r\n            <requestHeader>\r\n                <authorizationToken>43e13c81205d18807ee10c532532f81a9b76cba6b8e87dfaf2d753960a50c8d2</authorizationToken>\r\n            </requestHeader>\r\n            <projektzeit>\r\n                <userId>dhanshree.lonkar</userId>\r\n                <datum>2024-04-11</datum>\r\n                <von>09:00</von>\r\n                <bis>10:00</bis>\r\n                <projektNr>9060001</projektNr>\r\n                <vorgangNr>V02</vorgangNr>\r\n                <taetigkeit>Mitarbeiter JourFixe</taetigkeit>\r\n                <bemerkung>Natuvion Digital Jour Fix</bemerkung>\r\n                <istFakturierbar>True</istFakturierbar>\r\n                <istOrtProjektRelevant>False</istOrtProjektRelevant>\r\n                <ort>remote</ort>\r\n            </projektzeit>\r\n        </zep:CreateProjektzeitRequest>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.zep-online.de/zepnatuviondigital/sync/soap.php?v=10",
+					"protocol": "https",
+					"host": [
+						"www",
+						"zep-online",
+						"de"
+					],
+					"path": [
+						"zepnatuviondigital",
+						"sync",
+						"soap.php"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
