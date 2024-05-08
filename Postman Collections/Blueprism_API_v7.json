@@ -1,0 +1,6921 @@
+{
+	"info": {
+		"_postman_id": "f5f3bbc3-617c-428a-b789-1f8d678e7df8",
+		"name": "BP API v7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "7.0",
+			"item": [
+				{
+					"name": "Dashboards",
+					"item": [
+						{
+							"name": "Return aggregate work queue data for each of the requested queues",
+							"id": "4d997728-e354-4328-b40f-5390ebcd0667",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/workQueueCompositions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"workQueueCompositions"
+									],
+									"query": [
+										{
+											"key": "workQueueIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resource utilization",
+							"id": "2c9493d2-bbc2-46b8-aca0-3c1218290c0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourceutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourceutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pageNumber",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resources summary utilization by date range",
+							"id": "94389894-6041-4ee1-93a6-702f705fead0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourcessummaryutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourcessummaryutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "endDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "69be7f32-13f7-4294-a7f0-6fc9fb4f6598"
+				},
+				{
+					"name": "Encryption Schemes",
+					"item": [
+						{
+							"name": "Return a list of encryption schemes in the environment",
+							"id": "c3bcc3bc-44a6-4217-b64b-49e7919b7596",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/encryptionschemes"
+							},
+							"response": []
+						}
+					],
+					"id": "07965fc2-c3df-4da0-8a7d-b96ad7d20e5c"
+				},
+				{
+					"name": "Resources",
+					"item": [
+						{
+							"name": "Return a list of resources in the environment",
+							"id": "d2ad8b43-3561-40c9-845b-2259cd852697",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/resources",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"resources"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "displayStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34514e1c-ebc0-4c4c-a930-96370fac6fe4"
+				},
+				{
+					"name": "Schedules",
+					"item": [
+						{
+							"name": "Return a list of schedules in the environment",
+							"id": "76215440-5341-42fe-9e19-d65817627f01",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules"
+									],
+									"query": [
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "retirementStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a given schedule",
+							"id": "dac8cd40-0c6d-49ac-8c0c-038e886f8f81",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isRetired\": false\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId"
+									],
+									"variable": [
+										{
+											"id": "efef28d4-7a26-41e4-bf0c-8e1fd44e162a",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all schedule logs",
+							"id": "7d631b2f-10c1-4529-886c-f9697411411b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified schedule",
+							"id": "e2d1144f-4696-4959-9ccc-2266a4e0cb70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "11faae58-6e64-491c-81df-4fa3c240e1ce",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set a schedule to run at a specific date and time",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"id": "70b6e2de-bb97-4893-b325-2c4d9741bf4b"
+									}
+								}
+							],
+							"id": "e5b0c745-cbfe-41a9-944b-06ec33600f7e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startTime\": \"2020-10-02T10:34:56.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "5a0aca55-d0c7-492a-ae7d-dcad9c70f7ff",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve a list of tasks in a schedule",
+							"id": "4c71a783-e30b-45be-9a6f-6f374ce841ff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks"
+									],
+									"variable": [
+										{
+											"id": "2215a5c0-64a5-4f97-a42b-2ad532b1f824",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return a list of the scheduled sessions for a specified task",
+							"id": "a63a2d0c-1024-472b-a9cf-cb4c63e498f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/tasks/:taskId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										"tasks",
+										":taskId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "5f932f80-c18d-4e6f-a782-2ef0260cfada",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "d71054e4-3926-49cc-830e-260552c4ad50"
+				},
+				{
+					"name": "Sessions",
+					"item": [
+						{
+							"name": "Return a list of sessions in the environment",
+							"id": "6c05f45b-132d-412c-a37e-0979f62e6cea",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get details of a specified session",
+							"id": "6777799b-ae16-4d8d-bb4b-867e1fe406fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"id": "758e54c3-9f3b-4219-8d57-4a1756f81b2d",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified session",
+							"id": "3e621fbf-d796-4c41-a446-767a1c38ff1c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "d5aafcc8-a9cb-4d74-a381-c628cc2340a9",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all parameters for a specified session log",
+							"id": "f366bc95-2d2d-4030-8518-3164ff2b151f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs/:logId/parameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs",
+										":logId",
+										"parameters"
+									],
+									"variable": [
+										{
+											"id": "eebeae9a-4d4f-44ed-8b96-b9f1ec5060cd",
+											"key": "sessionId",
+											"value": ""
+										},
+										{
+											"id": "fc9bc355-acc2-4ee2-a4de-22a23945da98",
+											"key": "logId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "2d952a81-0ca5-4494-800a-9f98b2c225fe"
+				},
+				{
+					"name": "Work Queues",
+					"item": [
+						{
+							"name": "Return a list of work queues in the environment",
+							"id": "a7a82758-5aba-41e5-8ea1-0ee02dca66c4",
+							"protocolProfileBehavior": {
+								"strictSSL": false,
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new work queue",
+							"id": "2aa919bb-3c57-4b61-8650-4b8c5b0b577f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"keyField\": \"string\",\r\n    \"maxAttempts\": 1,\r\n    \"status\": \"Paused\",\r\n    \"encryptionKeyId\": 1\r\n}"
+								},
+								"url": "{{BPAPI_BASEURL}}/workqueues"
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a work queue",
+							"id": "527faf13-377b-49e2-9562-bf13e560a31c",
+							"protocolProfileBehavior": {
+								"strictSSL": false,
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "386cb0ad-805e-4e39-80c3-b4e0bf981b59",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifiy the work queue as described in the patch document",
+							"id": "1ab68b83-eb46-4e57-9774-a2773ad25ea5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"op\": \"add\",\r\n        \"path\": \"/someArrayProperty\",\r\n        \"value\": [\r\n            \"item1\",\r\n            \"item2\"\r\n        ]\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "ab1ca939-1390-4c4b-9911-1312b057ec44",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specified work queue",
+							"id": "94c243c7-79c2-49d5-9d42-b04dc8f5ed80",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "dddb81a0-45d7-4c4c-96c6-dbccaa888b72",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return items in a specified work queue",
+							"id": "449376a1-216a-4b63-871a-32127df7bb61",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "6a459bd4-bbd2-4143-b904-cee2d3693e64",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add items to a queue",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var time = new Date();\r",
+											"time.setHours(time.getHours() + 1);\r",
+											"pm.globals.set('anHourFromNow', time);"
+										],
+										"type": "text/javascript",
+										"id": "23093c9b-fde6-4edc-8bba-221410406a15"
+									}
+								}
+							],
+							"id": "f98f6b02-4f38-4c9c-b413-d1dbd3187dc6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"data\": {\r\n            \"rows\": [\r\n                {\r\n                    \"valueType\": \"Number\",\r\n                    \"value\": 321\r\n                },\r\n                {\r\n                    \"valueType\": \"Date\",\r\n                    \"value\": \"2020-10-02T11:34:56.000Z\"\r\n                }\r\n            ]\r\n        },\r\n        \"deferredDate\": \"2020-10-02T11:34:56.000Z\",\r\n        \"priority\": 3,\r\n        \"tags\": [\r\n            \"Example tag 1\",\r\n            \"Example tag 2\"\r\n        ],\r\n        \"status\": \"Example status\"\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items"
+									],
+									"variable": [
+										{
+											"id": "3480a11c-6d23-4306-9ead-a510b3edb658",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a specified item from a work queue",
+							"id": "e58f3ff1-b169-4768-94cb-afecd773b9a0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/items/:workQueueItemId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										"items",
+										":workQueueItemId"
+									],
+									"variable": [
+										{
+											"id": "0fe4db5d-aa62-48b0-b8a0-cb6e994fca31",
+											"key": "workQueueItemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "02e9250d-0841-4f05-9954-d4c10d7a5e37"
+				}
+			],
+			"id": "d3766bc0-df77-4417-ba83-9ae60dbc13ce",
+			"auth": {
+				"type": "oauth2",
+				"oauth2": {
+					"clientSecret": "{{BPAPI_CLIENTSECRET}}",
+					"clientId": "{{BPAPI_CLIENTID}}",
+					"accessTokenUrl": "{{BPAPI_OAUTH2URL}}",
+					"tokenName": "BP API Token",
+					"challengeAlgorithm": "S256",
+					"grant_type": "client_credentials",
+					"addTokenTo": "header",
+					"client_authentication": "body"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "2e9237dc-b95a-46ee-9441-240f1a93b2f2"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "4e467555-68c7-4f79-8c48-d5254f80b549"
+					}
+				}
+			]
+		},
+		{
+			"name": "7.0.1",
+			"item": [
+				{
+					"name": "Dashboards",
+					"item": [
+						{
+							"name": "Return aggregate work queue data for each of the requested queues",
+							"id": "7f36fbed-17d6-45a1-9a03-29f564ae1075",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/workQueueCompositions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"workQueueCompositions"
+									],
+									"query": [
+										{
+											"key": "workQueueIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resource utilization",
+							"id": "f25ba5f3-46b5-4d27-911f-b01c6d781b31",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourceutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourceutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pageNumber",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resources summary utilization by date range",
+							"id": "c8f15432-e141-4881-b8aa-33a236e1c2d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourcessummaryutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourcessummaryutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "endDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "b2551cdc-5f70-4d6b-8bb4-41ff200d9a3c"
+				},
+				{
+					"name": "Encryption Schemes",
+					"item": [
+						{
+							"name": "Return a list of encryption schemes in the environment",
+							"id": "227cb32b-c773-45fd-b5f7-060a8944f483",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/encryptionschemes"
+							},
+							"response": []
+						}
+					],
+					"id": "a9731e85-b392-4023-b9f3-71020daf289d"
+				},
+				{
+					"name": "Resources",
+					"item": [
+						{
+							"name": "Return a list of resources in the environment",
+							"id": "5f353e94-d007-4ac5-9f62-b22b08205a14",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/resources",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"resources"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "displayStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retires or unretires resource with the given ID",
+							"id": "450fe1da-a177-42b3-a303-c9712da5b73e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"attributes\": [\r\n        \"Retired\",\r\n        \"None\"\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/resources/:resourceId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"resources",
+										":resourceId"
+									],
+									"variable": [
+										{
+											"id": "585be8e4-a8b9-4acb-9928-368e887a1382",
+											"key": "resourceId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "fc128b1a-fa63-442e-9b07-f05e3e22e8a8"
+				},
+				{
+					"name": "Schedules",
+					"item": [
+						{
+							"name": "Return a list of schedules in the environment",
+							"id": "dfb96fda-fca3-422e-a811-194f9055d79f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules"
+									],
+									"query": [
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "retirementStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a given schedule",
+							"id": "3dd728aa-ca89-4193-9501-ac749c5ead4d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"isRetired\": true\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId"
+									],
+									"variable": [
+										{
+											"id": "262d949e-92d8-4076-8c6a-f653ab74406b",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all schedule logs",
+							"id": "165d0c0a-2feb-46cf-aad8-1b2d1bd89d92",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified schedule",
+							"id": "ff74b26f-94c2-4129-9d81-8af8316591e7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "2a8a8ddb-3186-4ef3-915c-af905e1ea5d7",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Set a schedule to run at a specific date and time",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"id": "fab52979-ae83-40d6-a1a8-e4dcb27f2b01"
+									}
+								}
+							],
+							"id": "ad5bee14-1293-4f4a-be09-00ef110bbfe1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"startTime\": \"2020-10-02T10:34:56.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "34ffebe7-4eb5-4926-8344-c26d2170fa98",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve a list of tasks in a schedule",
+							"id": "741967ee-056d-4d03-8875-3ebbdef29851",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks"
+									],
+									"variable": [
+										{
+											"id": "9abea25a-b15d-4e23-8a3c-5d861c0b5e29",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return a list of the scheduled sessions for a specified task",
+							"id": "4d092dd6-e50b-4909-b861-20e043917744",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/tasks/:taskId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										"tasks",
+										":taskId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "7589d8b5-a260-4f2a-9f2e-54c245cdb3dd",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "285e364e-cd50-4c95-96e5-d6f37668380c"
+				},
+				{
+					"name": "Sessions",
+					"item": [
+						{
+							"name": "Return a list of sessions in the environment",
+							"id": "2322fec9-8ee8-4c6c-9fb7-bc9aa2dea901",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get details of a specified session",
+							"id": "c8ba77f9-0cef-46da-adff-7117086f1abc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"id": "6eb3bb35-8673-47ad-8cf1-93ee97daa8ed",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified session",
+							"id": "407e8b26-a939-4d4e-9503-c62002d9a49e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "6b5a4303-2306-4cc6-b5ef-499420352726",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all parameters for a specified session log",
+							"id": "5e687bf5-9ac8-4e1a-b02a-e0f528d28249",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs/:logId/parameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs",
+										":logId",
+										"parameters"
+									],
+									"variable": [
+										{
+											"id": "484d4a34-1b04-4b2e-9c5d-1d3eb68b9405",
+											"key": "sessionId",
+											"value": ""
+										},
+										{
+											"id": "1a40d803-ce66-4070-8a0c-638b0a8a7280",
+											"key": "logId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "58693974-12d8-4908-8277-a61b89548044"
+				},
+				{
+					"name": "Work Queues",
+					"item": [
+						{
+							"name": "Return a list of work queues in the environment",
+							"id": "a2bca119-7307-4bce-935c-bc078e668bbf",
+							"protocolProfileBehavior": {
+								"strictSSL": false,
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new work queue",
+							"id": "e4d98486-d282-4074-a31a-c98d2cc480b9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"keyField\": \"string\",\r\n    \"maxAttempts\": 1,\r\n    \"status\": \"Paused\",\r\n    \"encryptionKeyId\": 1\r\n}"
+								},
+								"url": "{{BPAPI_BASEURL}}/workqueues"
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a work queue",
+							"id": "0a58e3a0-be97-40b7-9c3e-b018f9f8c4cc",
+							"protocolProfileBehavior": {
+								"strictSSL": false,
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "bb10f4c0-d2fa-4781-aaa1-210597c4cb66",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modifiy the work queue as described in the patch document",
+							"id": "035b0685-dd24-4bed-a004-3bc513ccfb5e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"op\": \"add\",\r\n        \"path\": \"/someArrayProperty\",\r\n        \"value\": [\r\n            \"item1\",\r\n            \"item2\"\r\n        ]\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "33afd638-ec32-48a6-9f7d-394f3a6e674c",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specified work queue",
+							"id": "0f587209-e3cb-48b4-ba27-46c616e18295",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "63e9f470-f09d-4010-8a57-7c97f572173c",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return items in a specified work queue",
+							"id": "97726af9-efa4-41df-a884-dd2a4324c437",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "9cf4463f-3a4a-4d0f-95f5-5612d87f5c59",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add items to a queue",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"var time = new Date();\r",
+											"time.setHours(time.getHours() + 1);\r",
+											"pm.globals.set('anHourFromNow', time);"
+										],
+										"type": "text/javascript",
+										"id": "7ede0bac-3da5-418e-921e-1f4f384a02f5"
+									}
+								}
+							],
+							"id": "b3799cfc-97e4-458c-95be-11e110b4478c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"data\": {\r\n            \"rows\": [\r\n                {\r\n                    \"valueType\": \"Number\",\r\n                    \"value\": 321\r\n                },\r\n                {\r\n                    \"valueType\": \"Date\",\r\n                    \"value\": \"2020-10-02T11:34:56.000Z\"\r\n                }\r\n            ]\r\n        },\r\n        \"deferredDate\": \"2020-10-02T11:34:56.000Z\",\r\n        \"priority\": 3,\r\n        \"tags\": [\r\n            \"Example tag 1\",\r\n            \"Example tag 2\"\r\n        ],\r\n        \"status\": \"Example status\"\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items"
+									],
+									"variable": [
+										{
+											"id": "e83e22a0-4a7a-4e94-842d-204b3971cecd",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a specified item from a work queue",
+							"id": "332f22ec-3b79-4136-b137-9f2809dcc116",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/items/:workQueueItemId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										"items",
+										":workQueueItemId"
+									],
+									"variable": [
+										{
+											"id": "79f1b234-2790-4057-a397-8d976d695cd1",
+											"key": "workQueueItemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "13737c79-bd57-4616-b47a-4b90c7d05799"
+				}
+			],
+			"id": "033a40e6-2c4b-4bb2-a008-49f5fd797262",
+			"auth": {
+				"type": "oauth2",
+				"oauth2": {
+					"clientSecret": "{{BPAPI_CLIENTSECRET}}",
+					"clientId": "{{BPAPI_CLIENTID}}",
+					"accessTokenUrl": "{{BPAPI_OAUTH2URL}}",
+					"tokenName": "BP API Token",
+					"challengeAlgorithm": "S256",
+					"grant_type": "client_credentials",
+					"addTokenTo": "header",
+					"client_authentication": "body"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "145cbb44-ffdb-4b30-8afe-185aabfdf4f0"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "ecfd8e0c-8a48-4b80-9d5c-d4f1fdf6e2d2"
+					}
+				}
+			]
+		},
+		{
+			"name": "7.1",
+			"item": [
+				{
+					"name": "Calendars",
+					"item": [
+						{
+							"name": "Return a list of calendars",
+							"id": "d105008b-ba7a-46dd-a263-fa8a6cbd5b7e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/calendars"
+							},
+							"response": []
+						}
+					],
+					"id": "75b4418a-61b1-4dbb-8347-a7b72e43c72f"
+				},
+				{
+					"name": "Dashboards",
+					"item": [
+						{
+							"name": "Return aggregate work queue data for each of the requested queues",
+							"id": "b41d1ec3-ca70-43ed-9dd4-2d201f8c3708",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/workQueueCompositions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"workQueueCompositions"
+									],
+									"query": [
+										{
+											"key": "workQueueIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resource utilization",
+							"id": "7d34f375-bf71-4a9f-951e-b169391d26c6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourceutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourceutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pageNumber",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return runtime resources summary utilization by date range",
+							"id": "6dabd95a-5eda-4d81-a870-8bce6f0da97f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/dashboards/resourcessummaryutilization",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"dashboards",
+										"resourcessummaryutilization"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "endDate",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "resourceIds",
+											"value": "",
+											"description": "Duplicate this query param if having multiple values",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "3462d904-c39b-41fa-926e-f2f5dad3ff78"
+				},
+				{
+					"name": "Encryption Schemes",
+					"item": [
+						{
+							"name": "Return a list of encryption schemes in the environment",
+							"id": "1f96aada-1249-41e6-9570-d6c340fc12f6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/encryptionschemes"
+							},
+							"response": []
+						}
+					],
+					"id": "a750d0fb-de68-44c2-b371-e4421a71bc21"
+				},
+				{
+					"name": "Processes",
+					"item": [
+						{
+							"name": "Return a list of all the processes in the environment",
+							"id": "b51fd76c-9d77-44d5-ab01-a704dea02903",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/processes",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"processes"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "description[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "description[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "description[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "description[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attributesInclude",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "attributesExclude",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "493fb1ce-6558-4acb-95fe-fd01a3148c7c"
+				},
+				{
+					"name": "Resources",
+					"item": [
+						{
+							"name": "Return a list of resources in the environment",
+							"id": "73e0a226-f54d-4b9e-a2dc-f88b9dd36fa8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/resources",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"resources"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "groupName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "poolName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "activeSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingSessionCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "retirementFilter",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "displayStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retire or unretire a resource with the given ID",
+							"id": "40658a52-eb70-404a-91a2-81a9ca221d5a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"attributes\": [\r\n        \"None\"\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/resources/:resourceId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"resources",
+										":resourceId"
+									],
+									"variable": [
+										{
+											"id": "ae86fdb8-9ce0-41fb-98b2-c4e2755807b5",
+											"key": "resourceId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "e06ace49-4e4e-4faf-b28b-2ed25303d245"
+				},
+				{
+					"name": "Pools",
+					"item": [
+						{
+							"name": "Return a list of resource pools",
+							"id": "6fe1b6f3-ffc3-4a4d-88e0-7765c163278d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/resources/pools"
+							},
+							"response": []
+						}
+					],
+					"id": "f732b433-98c4-48fa-91e5-626566f4fd3a"
+				},
+				{
+					"name": "Schedules",
+					"item": [
+						{
+							"name": "Return a list of schedules in the environment",
+							"id": "308f4b85-bc1f-4db3-976c-1c2395704c05",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules"
+									],
+									"query": [
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "retirementStatus",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new schedule definition",
+							"id": "f077e4d0-c121-4b34-b18f-2e5a3dda3c66",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"description\": \"string\",\r\n    \"initialTaskId\": 0,\r\n    \"intervalType\": \"Once\",\r\n    \"startDate\": \"2019-08-24T14:15:22Z\",\r\n    \"endDate\": \"2019-08-24T14:15:22Z\",\r\n    \"timeZoneId\": \"string\",\r\n    \"adjustForDaylightSaving\": true,\r\n    \"minutelyDetails\": {\r\n        \"period\": 0,\r\n        \"start\": \"14:15:22Z\",\r\n        \"end\": \"14:15:22Z\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"hourlyDetails\": {\r\n        \"period\": 0,\r\n        \"start\": \"14:15:22Z\",\r\n        \"end\": \"14:15:22Z\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"dailyDetails\": {\r\n        \"period\": 0,\r\n        \"calendarId\": 0\r\n    },\r\n    \"weeklyDetails\": {\r\n        \"period\": 0,\r\n        \"type\": \"WeekDay\",\r\n        \"weekDay\": \"First\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"monthlyDetails\": {\r\n        \"period\": 0,\r\n        \"type\": \"NthDay\",\r\n        \"missingDateAction\": \"Skip\",\r\n        \"weekNumber\": \"First\",\r\n        \"weekDay\": \"Sunday\",\r\n        \"workingDay\": \"First\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"yearlyDetails\": {\r\n        \"period\": 0\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules"
+									],
+									"query": [
+										{
+											"key": "copyFrom",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return requested schedule summary",
+							"id": "1be8951d-f32d-4233-8aa9-3caa55c3075f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId"
+									],
+									"variable": [
+										{
+											"id": "8337c1fa-57ce-4912-80fc-ab02d6f474dd",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a given schedule",
+							"id": "cf022a61-5990-4b25-ad5b-4b5d33e5e791",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"description\": \"string\",\r\n    \"initialTaskId\": 0,\r\n    \"isRetired\": true,\r\n    \"intervalType\": \"Once\",\r\n    \"startDate\": \"2019-08-24T14:15:22Z\",\r\n    \"endDate\": \"2019-08-24T14:15:22Z\",\r\n    \"timeZoneId\": \"string\",\r\n    \"adjustForDaylightSaving\": true,\r\n    \"minutelyDetails\": {\r\n        \"period\": 0,\r\n        \"start\": \"14:15:22Z\",\r\n        \"end\": \"14:15:22Z\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"hourlyDetails\": {\r\n        \"period\": 0,\r\n        \"start\": \"14:15:22Z\",\r\n        \"end\": \"14:15:22Z\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"dailyDetails\": {\r\n        \"period\": 0,\r\n        \"calendarId\": 0\r\n    },\r\n    \"weeklyDetails\": {\r\n        \"period\": 0,\r\n        \"type\": \"WeekDay\",\r\n        \"weekDay\": \"First\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"monthlyDetails\": {\r\n        \"period\": 0,\r\n        \"type\": \"NthDay\",\r\n        \"missingDateAction\": \"Skip\",\r\n        \"weekNumber\": \"First\",\r\n        \"weekDay\": \"Sunday\",\r\n        \"workingDay\": \"First\",\r\n        \"calendarId\": 0\r\n    },\r\n    \"yearlyDetails\": {\r\n        \"period\": 0\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId"
+									],
+									"variable": [
+										{
+											"id": "a79d1278-7d65-40c3-bf2a-32d0d27ab471",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specified schedule",
+							"id": "fa863b50-aa4d-46ab-9ec8-9670071727ea",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId"
+									],
+									"variable": [
+										{
+											"id": "f5feabe1-ec86-4893-849d-29913eca55a2",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a session and set a schedule to run at a specific date and time",
+							"id": "4755119a-338c-41fd-a742-8faa096abc5b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"startTime\": \"2020-10-02T12:34:56+02:00\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "b520e3d5-754e-4382-93ca-60c39eec13d7",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Request the schedule to stop",
+							"id": "58e0e9de-d740-485e-a3ea-d0e25a7e8499",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "5221621b-db9a-420d-a4ac-3f51ac106ca2",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return a list of tasks in a schedule",
+							"id": "377f3c3a-04f4-4a9f-8cd5-efd12a7c35dd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks"
+									],
+									"variable": [
+										{
+											"id": "e9f9ed64-8fa3-4f7e-bb67-1b5608e6fdf5",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a task in a schedule",
+							"id": "40bb5e65-79e7-4053-aa82-9b8f273c60e2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"description\": \"string\",\r\n    \"failFastOnError\": true,\r\n    \"delayAfterEnd\": 0,\r\n    \"onSuccessTaskId\": 0,\r\n    \"onFailureTaskId\": 0\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks"
+									],
+									"variable": [
+										{
+											"id": "8be3f583-9810-4deb-b5e0-9ce977a01f52",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return a given scheduled task",
+							"id": "ac1b51ab-fa86-4f18-a0db-b2ad5339e73a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"id": "5283360f-2f7a-40b5-9224-b89b71d8a2d0",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "fbdeb7a7-196f-4219-881f-a85c9bd0cf55",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a given scheduled task",
+							"id": "3a9b4a24-0a7f-4cdd-96dc-48efacad6e5c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"id": "281ed29e-a0c9-4b4a-ae19-7a156eb2c838",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "55a32e63-3641-45fe-8b06-a8834cd0edfa",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update a given scheduled task",
+							"id": "19cbaefb-1f65-4275-a6cf-53915d4fab70",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"string\",\r\n    \"description\": \"string\",\r\n    \"failFastOnError\": true,\r\n    \"delayAfterEnd\": 0,\r\n    \"onSuccessTaskId\": 0,\r\n    \"onFailureTaskId\": 0\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId"
+									],
+									"variable": [
+										{
+											"id": "7e0f2e9d-7688-47b3-9354-563b5bbbee4e",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "2e74eba2-cb3d-49b1-9e52-e9e6a6e62384",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete scheduled task session",
+							"id": "3e3fc6d1-35f0-4027-aef3-2e0fd74b71a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId/sessions/:sessionId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId",
+										"sessions",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"id": "d39e950d-6257-4a8d-b844-81cd5f81a3ea",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "52a8effe-546b-4cc2-8c7d-f32812235301",
+											"key": "taskId",
+											"value": ""
+										},
+										{
+											"id": "c0e066a2-fefb-4fb5-aceb-b7f6611a18e4",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return a list of the scheduled sessions for a specified task",
+							"id": "69ce621a-7c41-43ad-930b-665d44e17255",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "6add8295-d681-4272-90c4-b0331c57ca1d",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "1ee5d48a-05f8-4e07-9fe9-cde2240ab7b6",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a scheduled session in task",
+							"id": "e463ac73-2aa3-4790-a74d-afe8c28d875d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"processId\": \"9e0ad09b-5150-48c0-aded-707587048fd9\",\r\n    \"resourceId\": \"026d60bb-63a8-407e-bf67-01dcfc6022e6\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId",
+										"sessions"
+									],
+									"variable": [
+										{
+											"id": "a555578e-4449-49e8-b85b-b8cf3457a70f",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "c30b7dda-618c-42c2-8813-1510a80c7b9b",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update start-up parameters",
+							"id": "a43b8213-ea45-4caf-a1c4-5f8933578192",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"parameters\": {\r\n            \"parameter1\": {\r\n                \"valueType\": \"Text\",\r\n                \"value\": \"Example value\"\r\n            },\r\n            \"parameter2\": {\r\n                \"valueType\": \"Number\",\r\n                \"value\": 123\r\n            }\r\n        },\r\n        \"taskSessionId\": 3\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId/scheduledSessionParameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId",
+										"scheduledSessionParameters"
+									],
+									"variable": [
+										{
+											"id": "e40c1994-99f7-41c5-a50d-145517020cb0",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "7e00f3c1-46b3-458c-9041-83a7e6765a2d",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return start-up parameters",
+							"id": "7818fa12-9b63-4f93-b358-0dc6066a652d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/schedules/:scheduleId/tasks/:taskId/scheduledSessionParameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"schedules",
+										":scheduleId",
+										"tasks",
+										":taskId",
+										"scheduledSessionParameters"
+									],
+									"variable": [
+										{
+											"id": "b6db8834-dcb7-49a9-a82a-0ce15cc2fde6",
+											"key": "scheduleId",
+											"value": ""
+										},
+										{
+											"id": "9db9982c-6a55-4adb-8e36-0f7958d5ffff",
+											"key": "taskId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "7f9b823b-783a-48d9-966f-142b6ad8c6f0"
+				},
+				{
+					"name": "Schedule Logs",
+					"item": [
+						{
+							"name": "Return all schedule logs",
+							"id": "33c3c837-5d00-4935-a298-ee558d036ed6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/scheduleLogs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"scheduleLogs"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "scheduleName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified schedule",
+							"id": "efcbebb2-da9d-44b9-97c2-14d85f2ed140",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/scheduleLogs/:scheduleId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"scheduleLogs",
+										":scheduleId"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "scheduleLogStatus",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "serverName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "5cedcd14-9ac3-46fa-ac76-f680968b481f",
+											"key": "scheduleId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "d26a354d-166b-4923-8e6e-8954de4ab98d"
+				},
+				{
+					"name": "Sessions",
+					"item": [
+						{
+							"name": "Return a list of sessions in the environment",
+							"id": "fbd2993b-fa49-4df4-a63f-d2a423f19656",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "processName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "sessionNumber[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "resourceName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "userName[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "",
+											"description": "Optional; duplicate this query param if having multiple values",
+											"disabled": true
+										},
+										{
+											"key": "startTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "startTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "endTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "latestStage[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "stageStarted[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "onlySessionsForCurrentUser",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new session for the given resource ID and process ID",
+							"id": "e23ecd61-37d0-461a-97c1-38451158af2e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"resourceId\": \"026d60bb-63a8-407e-bf67-01dcfc6022e6\",\r\n    \"processId\": \"9e0ad09b-5150-48c0-aded-707587048fd9\"\r\n}"
+								},
+								"url": "{{BPAPI_BASEURL}}/sessions/"
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a specified session",
+							"id": "f5b532f6-338e-4dfa-88d2-ffc9407a74c6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"id": "e4f0a6de-c601-483a-8576-37876b384722",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update the session for the given session ID",
+							"id": "dba61b8b-f185-4656-bb85-7d8e528dbac7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"pending\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId"
+									],
+									"variable": [
+										{
+											"id": "f0459efb-81ac-428a-b36e-e6397f9d72e6",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get start-up parameters for a specified session",
+							"id": "8d4daeb2-dd1c-49c1-8e0b-4b0f891652cd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/parameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"parameters"
+									],
+									"variable": [
+										{
+											"id": "0ca51bec-647c-421f-9167-58effe1a3d57",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update start-up parameters for a specified session",
+							"id": "eac96fff-932a-4c0f-b212-eb6163be666b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"parameters\": {\r\n        \"parameter1\": {\r\n            \"valueType\": \"Text\",\r\n            \"value\": \"Example value\"\r\n        },\r\n        \"parameter2\": {\r\n            \"valueType\": \"Number\",\r\n            \"value\": 123\r\n        }\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/parameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"parameters"
+									],
+									"variable": [
+										{
+											"id": "f75e4a07-c7f5-49e8-a320-fd8043fa39a0",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all logs for a specified session",
+							"id": "22dc03b8-5559-47fb-a5fb-78f47c4040d3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs"
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "aef59d23-c91e-4bb4-bc06-fb829f2c1bed",
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return all parameters for a specified session log",
+							"id": "efffad18-9194-497a-9411-795db2e4cc83",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/sessions/:sessionId/logs/:logId/parameters",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"sessions",
+										":sessionId",
+										"logs",
+										":logId",
+										"parameters"
+									],
+									"variable": [
+										{
+											"id": "9b521e7b-eaa9-4150-9e9b-746b3f61d9e2",
+											"key": "sessionId",
+											"value": ""
+										},
+										{
+											"id": "b1831c37-cc53-4c83-87c7-a97cf3a254ba",
+											"key": "logId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "b9dc43ca-c581-4896-b320-676ae6d883c1"
+				},
+				{
+					"name": "Time Zones",
+					"item": [
+						{
+							"name": "Return a list of time zones",
+							"id": "038ce514-cad4-4d22-a449-e92a6c680e0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/timezones"
+							},
+							"response": []
+						}
+					],
+					"id": "9328d105-c034-45f3-abbc-a49b80f626df"
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Return a list of permissions for the currently authenticated user",
+							"id": "cdd2dd90-705d-40b0-a680-57d258ed7e96",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{BPAPI_BASEURL}}/user/permissions"
+							},
+							"response": []
+						}
+					],
+					"id": "d34dcaaf-889d-445f-8de0-8011eac1c481"
+				},
+				{
+					"name": "Work Queues",
+					"item": [
+						{
+							"name": "Return a list of work queues in the environment",
+							"id": "bb0f69ee-7229-4a9e-af66-a471c3b23bda",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyField[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "maxAttempts[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pendingItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalItemCount[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "averageWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalCaseDuration[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create a new work queue",
+							"id": "3a07a38a-f82a-41a6-9417-61e4021b16c1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Example queue\",\r\n    \"keyField\": \"Example field\",\r\n    \"maxAttempts\": 3,\r\n    \"status\": \"Running\",\r\n    \"encryptionKeyId\": 0\r\n}"
+								},
+								"url": "{{BPAPI_BASEURL}}/workqueues"
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a work queue",
+							"id": "185732f4-0f14-41f5-8abe-3fe9338283a6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "711f443b-0466-4cc1-9542-1a2c942cb196",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify the work queue as described in the patch document",
+							"id": "3736a88a-1ef6-4e3d-b85b-6d33fc380c7f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"op\": \"add\",\r\n        \"path\": \"/someArrayProperty\",\r\n        \"value\": [\r\n            \"item1\",\r\n            \"item2\"\r\n        ]\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "57186457-1d17-403e-904e-a767e4a498a7",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a specified work queue",
+							"id": "82229ecb-2d62-4cf1-a0ac-593b8f0c7c4b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId"
+									],
+									"variable": [
+										{
+											"id": "aaeed1ad-81aa-40d8-8648-38d4ef2dae0e",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return items in a specified work queue",
+							"id": "aaafd9e7-150c-40d0-aa68-21689bf088be",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "keyValue[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "status[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "state",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[ctn]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[strtw]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionReason[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "totalWorkTime[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "attempt[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "priority[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "loadedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "deferredDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lockedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "completedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "exceptionedDate[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[gte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[lte]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "lastUpdated[eq]",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "itemsPerPage",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "pagingToken",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"id": "b626cacb-e109-4eb0-8c76-8382afd62f6a",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create work queue items",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"id": "1e9c5117-696d-43e3-b30e-4719ac2d7f0b"
+									}
+								}
+							],
+							"id": "1466cf79-87b0-4509-bf07-ef2bb0fec4c0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"data\": {\r\n            \"rows\": [\r\n                {\r\n                    \"valueType\": \"Number\",\r\n                    \"value\": 321\r\n                },\r\n                {\r\n                    \"valueType\": \"Date\",\r\n                    \"value\": \"2020-10-02T12:34:56+01:00\"\r\n                }\r\n            ]\r\n        },\r\n        \"deferredDate\": \"2020-10-02T12:34:56+01:00\",\r\n        \"priority\": 3,\r\n        \"tags\": [\r\n            \"Example tag 1\",\r\n            \"Example tag 2\"\r\n        ],\r\n        \"status\": \"Example status\"\r\n    }\r\n]"
+								},
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items/batch",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items",
+										"batch"
+									],
+									"variable": [
+										{
+											"id": "494122dd-1f89-4ecf-be24-99f98183bde4",
+											"key": "workQueueId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return details of a specified item from a work queue",
+							"id": "07a55874-d4e7-47e7-9062-d7fba82a9d16",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BPAPI_BASEURL}}/workqueues/:workQueueId/items/:workQueueItemId",
+									"host": [
+										"{{BPAPI_BASEURL}}"
+									],
+									"path": [
+										"workqueues",
+										":workQueueId",
+										"items",
+										":workQueueItemId"
+									],
+									"variable": [
+										{
+											"id": "3f9e2b7e-6f27-4bb5-95f3-3f365e6a33db",
+											"key": "workQueueId",
+											"value": ""
+										},
+										{
+											"id": "2310d3bb-4787-4986-941f-e5e5ccb62f86",
+											"key": "workQueueItemId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "486e6b93-3211-43c3-adc8-d56dc367f316"
+				}
+			],
+			"id": "ba890149-0ccb-4bb6-a78d-4f275d4b582c",
+			"auth": {
+				"type": "oauth2",
+				"oauth2": {
+					"clientSecret": "{{BPAPI_CLIENTSECRET}}",
+					"clientId": "{{BPAPI_CLIENTID}}",
+					"accessTokenUrl": "{{BPAPI_OAUTH2URL}}",
+					"tokenName": "BP API Token",
+					"challengeAlgorithm": "S256",
+					"grant_type": "client_credentials",
+					"addTokenTo": "header",
+					"client_authentication": "body"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "104ed77d-1140-4c71-bb1e-6a1dd0ca7b66"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "6c758673-84aa-494e-9de8-72a3e5d3299c"
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "151e8b76-38a4-441f-a418-5734ff076501"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				],
+				"id": "63309b75-e80c-40c0-b84b-1d43c02c9f31"
+			}
+		}
+	]
+}
