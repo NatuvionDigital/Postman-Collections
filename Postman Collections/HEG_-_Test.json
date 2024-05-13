@@ -64,6 +64,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Alle Listen",
+			"id": "2b23a9e2-8441-42f5-a2a3-53dc642a51a2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "ntlm",
+					"ntlm": {
+						"password": "Wa$$erstoff9!(",
+						"username": "hegrobot"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "HEG - Alle Listen"
+			},
+			"response": []
 		}
 	]
 }
